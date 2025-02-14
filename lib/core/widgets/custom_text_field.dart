@@ -15,15 +15,7 @@ class CustomTextField extends StatelessWidget {
       children: [
         Text(label, style: AppTextStyles.font20WhiteBold),
         const SizedBox(height: 5),
-        TextFormField(
-          
-          validator: (value) {
-            if (value == null || value.isEmpty) {
-              return 'Field is required';
-            }
-            return null;
-          },
-          
+        TextField(
           controller: controller,
           cursorColor: Colors.white,
           decoration: InputDecoration(
