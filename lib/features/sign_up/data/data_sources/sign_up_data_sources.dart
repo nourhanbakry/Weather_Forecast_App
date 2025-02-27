@@ -1,5 +1,7 @@
 import 'package:cellula_project/core/networking/firbase_services.dart';
+import 'package:cellula_project/core/networking/networking_constants.dart';
 import 'package:cellula_project/features/sign_up/data/models/sign_up_user_model.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 abstract class SignUpDataSourcesAbstract {
@@ -8,6 +10,7 @@ abstract class SignUpDataSourcesAbstract {
 
 class SignUpDataSourcesImpl extends SignUpDataSourcesAbstract {
   final FirebaseAuth firebaseAuth = FirbaseServices.authInstance;
+  final FirebaseFirestore firestore = FirbaseServices.firestore;
 
   @override
   Future<SignUpUserModel> signUp(
@@ -19,6 +22,18 @@ class SignUpDataSourcesImpl extends SignUpDataSourcesAbstract {
       );
 
       await credential.user!.updateDisplayName(name);
+
+      String uid = credential.user!.uid;
+
+      await firestore
+          .collection(NetworkingConstants.usersCollection)
+          .doc(uid)
+          .set(
+            {
+              'name':name,
+              'email':email,
+            }
+          );
 
       return SignUpUserModel(
         uid: credential.user!.uid,

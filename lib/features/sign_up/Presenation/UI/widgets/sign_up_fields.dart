@@ -23,7 +23,7 @@ class SignUpFields extends StatelessWidget {
         CustomTextField(controller: emailController, label: AppStrings.email),
         SizedBox(height: 10),
         CustomTextField(
-            controller: passwordController, label: AppStrings.password),
+            controller: passwordController, label: AppStrings.password,obscureText: true,),
         SizedBox(height: 40),
       ],
     );

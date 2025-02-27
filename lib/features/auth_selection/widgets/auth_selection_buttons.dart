@@ -15,7 +15,7 @@ class AuthSelectionButtons extends StatelessWidget {
       children: [
         CustomTextButton(
             onPressed: () {
-              context.pushNamed(Routes.signup);
+              context.pushReplacementNamed(Routes.signup);
             },
             backGroundColor: AppColors.lightBlue,
             foregroundColor: Colors.white,
@@ -29,7 +29,7 @@ class AuthSelectionButtons extends StatelessWidget {
         SizedBox(height: 16),
         CustomTextButton(
             onPressed: () {
-              context.pushNamed(Routes.login);
+              context.pushReplacementNamed(Routes.login);
             },
             backGroundColor: Colors.white,
             foregroundColor: AppColors.naivyBlue,

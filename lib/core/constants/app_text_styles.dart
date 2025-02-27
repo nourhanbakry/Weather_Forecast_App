@@ -33,4 +33,23 @@ class AppTextStyles {
     fontSize: 26,
     fontWeight: AppFontWeights.extraBold,
   );
+
+   static const TextStyle font30LightBlueBold = TextStyle(
+    fontSize: 30,
+    color: AppColors.lightBlue,
+    fontWeight: AppFontWeights.bold,
+  );
+
+    static const TextStyle font30WhiteBold = TextStyle(
+    fontSize: 30,
+    color: Colors.white,
+    fontWeight: AppFontWeights.bold,
+  );
+
+    static const TextStyle font26lightBlueRegular = TextStyle(
+    fontSize: 26,
+    color: AppColors.lightBlue,
+    fontWeight: AppFontWeights.regular,
+  );
+
 }
