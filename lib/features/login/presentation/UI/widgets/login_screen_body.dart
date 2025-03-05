@@ -2,6 +2,7 @@ import 'package:cellula_project/core/constants/app_colors.dart';
 import 'package:cellula_project/core/constants/app_strings.dart';
 import 'package:cellula_project/core/constants/app_text_styles.dart';
 import 'package:cellula_project/core/helper/extensions.dart';
+import 'package:cellula_project/core/routing/routes.dart';
 import 'package:cellula_project/core/widgets/custom_text_button.dart';
 import 'package:cellula_project/features/login/presentation/Logic/login_cubit.dart';
 import 'package:cellula_project/features/login/presentation/Logic/login_states.dart';
@@ -38,6 +39,7 @@ class _LoginScreenBodyState extends State<LoginScreenBody> {
         if (state is SuccessLoginState) {
           ScaffoldMessenger.of(context)
               .showSnackBar(SnackBar(content: Text('success')));
+          context.pushReplacementNamed(Routes.home);
         } else if (state is FailureLoginState) {
           ScaffoldMessenger.of(context)
               .showSnackBar(SnackBar(content: Text('faild')));

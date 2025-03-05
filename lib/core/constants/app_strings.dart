@@ -15,5 +15,13 @@ class AppStrings {
   static const String haveAnAccount = 'HAVE AN ACCOUNT?';
   static const String userNotFound = 'user-not-found';
   static const String wrongPassword = 'wrong-password';
-  
+  static const String latitude = 'latitude';
+  static const String longtude = 'longtude';
+  static const String userName = 'userName';
+  static const String hello = 'Hello';
+  static const String weatherInfo = 'Weather Information';
+  static const String expectation = 'Expectation';
+  static const String temp = "Temp";
+  static const String humeditiy = "Humeditiy";
+  static const String wind = "Wind";
 }

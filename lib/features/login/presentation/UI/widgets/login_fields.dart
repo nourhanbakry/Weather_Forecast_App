@@ -5,7 +5,10 @@ import 'package:cellula_project/core/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
 
 class LoginFields extends StatelessWidget {
-  const LoginFields({super.key, required this.emailController, required this.passwordController});
+  const LoginFields(
+      {super.key,
+      required this.emailController,
+      required this.passwordController});
   final TextEditingController emailController;
   final TextEditingController passwordController;
 
@@ -21,7 +24,10 @@ class LoginFields extends StatelessWidget {
         CustomTextField(controller: emailController, label: AppStrings.email),
         SizedBox(height: 10),
         CustomTextField(
-            controller: passwordController, label: AppStrings.password),
+          controller: passwordController,
+          label: AppStrings.password,
+          obscureText: true,
+        ),
         SizedBox(height: 40),
       ],
     );

@@ -2,6 +2,7 @@ import 'package:cellula_project/core/constants/app_colors.dart';
 import 'package:cellula_project/core/constants/app_strings.dart';
 import 'package:cellula_project/core/constants/app_text_styles.dart';
 import 'package:cellula_project/core/helper/extensions.dart';
+import 'package:cellula_project/core/routing/routes.dart';
 import 'package:cellula_project/core/widgets/custom_text_button.dart';
 import 'package:cellula_project/features/sign_up/Presenation/Logic/sign_up_cubit.dart';
 import 'package:cellula_project/features/sign_up/Presenation/Logic/sign_up_states.dart';
@@ -39,6 +40,7 @@ class _SignUpScreenBodyState extends State<SignUpScreenBody> {
         if (state is SucessSignUpState) {
           ScaffoldMessenger.of(context)
               .showSnackBar(SnackBar(content: Text('success')));
+          context.pushReplacementNamed(Routes.home);
         } else if (state is FailureSignUpState) {
           ScaffoldMessenger.of(context)
               .showSnackBar(SnackBar(content: Text('faild')));
