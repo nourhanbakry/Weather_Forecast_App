@@ -63,7 +63,5 @@ The project follows a clean architecture with the following layers:
 - **Flask**: For hosting the local AI model.
 - **Scikit-learn**: For the AI model.
 
----
-
 ## 🎥 Demo
 Check out the demo of the app [here](https://github.com/user-attachments/assets/9aa4fd74-61c0-42dc-a3b5-1b6bd391e93e).
